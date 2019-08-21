@@ -4,14 +4,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Methods {
+class Methods {
 
-    public void writeReadAndCopy(String _originFile, String _destinationFile, String _message) {
+    void writeReadAndCopy(String _originFile, String _destinationFile, String _message) {
         String message = _message != null ? _message : "Bonjour je teste l'écriture dans un fichier ! ";
         try {
             FileReader originFile = new FileReader(_originFile);
             FileWriter destinationFile = new FileWriter(_destinationFile);
-            int octet = 0;
+            int octet;
 
             for (int i = 0; i < message.length(); i++) {
                 destinationFile.write(message.charAt(i));
@@ -32,11 +32,11 @@ public class Methods {
         }
     }
 
-    public void copy(String _originFile, String _destinationFile) {
+    void copy(String _originFile, String _destinationFile) {
         try {
             FileReader originFile = new FileReader(_originFile);
             FileWriter copyFile = new FileWriter(_destinationFile);
-            int octet = 0;
+            int octet;
 //            originFile.skip(10);
             do {
                 octet = originFile.read();
@@ -51,13 +51,13 @@ public class Methods {
         }
     }
 
-    public void readThenCopy(String _originFile, String _destinationFile) {
+    void readThenCopy(String _originFile, String _destinationFile) {
 
         StringBuilder string = new StringBuilder();
 
         try {
             FileReader fichier = new FileReader(_originFile);
-            int octet = 0;
+            int octet;
             do {
                 octet = fichier.read();
                 if (octet > 0) {

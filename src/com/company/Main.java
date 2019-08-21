@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.*;
-
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         Methods methods = new Methods();
@@ -12,8 +10,8 @@ public class Main {
         } else {
             String message = "Je suis le texte copié !";
             methods.copy(args[0], args[1]);
-//            methods.readThenCopy(args[0], args[1]);
-//            methods.writeReadAndCopy(args[0], "copie2.txt", message);
+            methods.readThenCopy(args[0], args[1]);
+            methods.writeReadAndCopy(args[0], "copie2.txt", message);
         }
     }
 }
