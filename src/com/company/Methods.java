@@ -37,6 +37,7 @@ public class Methods {
             FileReader originFile = new FileReader(_originFile);
             FileWriter copyFile = new FileWriter(_destinationFile);
             int octet = 0;
+//            originFile.skip(10);
             do {
                 octet = originFile.read();
                 if (octet > 0) {

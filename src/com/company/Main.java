@@ -11,9 +11,9 @@ public class Main {
             System.out.println("Veuillez renseigner les fichiers dans les paramètres d'application !");
         } else {
             String message = "Je suis le texte copié !";
-            methods.writeReadAndCopy(args[0], "copie2.txt", message);
             methods.copy(args[0], args[1]);
-            methods.readThenCopy(args[0], args[1]);
+//            methods.readThenCopy(args[0], args[1]);
+//            methods.writeReadAndCopy(args[0], "copie2.txt", message);
         }
     }
 }
